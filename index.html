@@ -462,80 +462,62 @@
             <h1>Dohyeon Lee</h1>
             <p>I am a Ph.D. Student at the LDI Lab of Seoul National University.</p>
             <p>I am fortunate to be advised by <a href="https://seungwonh.github.io/" target="_blank" style="text-decoration:none;">Prof. Seung-won Hwang</a>.</p>
-            <p>My research interests focus on information retrieval and hybrid approaches.</p>
+            <p>My research interests focus on agentic AI on information retrieval system.</p>
             <div class="social-links">
                 <a href="https://github.com/waylight3" target="_blank"><i class="fab fa-github"></i></a>
-                <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
                 <a href="https://scholar.google.com/citations?user=Gjk6Zk0AAAAJ" target="_blank"><i class="fab fa-google-scholar"></i></a>
-                <!-- <a href="#" target="_blank"><i class="fab fa-twitter"></i></a> -->
             </div>
         </section>
 
         <section id="research" class="section">
             <h2 class="section-title">Research Area</h2>
+            An <b>Agentic Retrieval System</b> is a retrieval framework in which agents actively interact with their environment to adapt, make decisions, and improve performance over time. The notion of agentic behavior emphasizes that agents are not static components but autonomous actors capable of exploration and adaptation. The environment can take many forms—including data, tools, memory, and other agents—which shape how the agent perceives, learns, and acts within the retrieval ecosystem.
             <div class="research-card">
-                <h3>Representation-level Hybrid Retrieval</h3>
-                <p>This approach aims to combine the precise lexical matching capability inherent to sparse models with the rich semantic representation strength of dense models.</p>
-                <div class="tags">
-                    <span class="tag">Information Retrieval</span>
-                    <span class="tag">Hybrid Retrieval</span>
-                    <span class="tag">Sparse Models</span>
-                    <span class="tag">Dense Models</span>
-                    <span class="tag">Lexical Representation</span>
-                    <span class="tag">Semantic Representation</span>
-                </div>
+                <h3>How Agentic Retrieval System Interact with Data</h3>
+                <p>Agents are exposed to new domain-specific corpora and tasked with adapting their retrieval strategies accordingly. Through exploration, they identify informative patterns or signals—such as domain-specific term distributions or statistical cues like inverse document frequency (IDF)—which help refine queries and relevance assessments. This interaction enables adaptive retrieval in unfamiliar or evolving data environments.</p>
             </div>
             <div class="research-card">
-                <h3>Distribution-level Hybrid Retrieval</h3>
-                <p>This approach aims to integrate both corpus-wide inverse document frequency (idf) distributions and document-level term distributions into the retrieval training process.</p>
-                <div class="tags">
-                    <span class="tag">Information Retrieval</span>
-                    <span class="tag">Hybrid Retrieval</span>
-                    <span class="tag">Domain Adaptation</span>
-                    <span class="tag">Zero-shot Retrieval</span>
-                    <span class="tag">Inverse Document Frequency</span>
-                    <span class="tag">Term Distribution</span>
-                </div>
+                <h3>How Agentic Retrieval System Interact with Other Agents</h3>
+                <p>In multi-agent retrieval settings, each agent may specialize in a particular domain, retrieval strategy, or reasoning style. Effective collaboration depends on defining clear roles and encouraging complementary behaviors that enhance overall system performance. A key research focus is on quantifying and optimizing synergy among agents, such as minimizing redundancy or maximizing coverage across retrieved information.</p>
             </div>
             <div class="research-card">
-                <h3>Term-level Hybrid Retrieval</h3>
-                <p>This approach aims to augment pseudo-queries by incorporating terms previously unseen during training or even within the target corpus, thereby reducing the mismatch between pseudo-queries and real-world queries by expanding effective vocabulary coverage.</p>
-                <div class="tags">
-                    <span class="tag">Information Retrieval</span>
-                    <span class="tag">Hybrid Retrieval</span>
-                    <span class="tag">Domain Adaptation</span>
-                    <span class="tag">Zero-shot Retrieval</span>
-                    <span class="tag">Pseudo-query Generation</span>
-                    <span class="tag">Query Expansion/Refinement</span>
-                    <span class="tag">Vocabulary Expansion</span>
-                    <span class="tag">Out-of-vocabulary Terms</span>
-                </div>
+                <h3>How Agentic Retrieval System Interact with Tools</h3>
+                <p>Agents interact with a variety of retrieval tools—such as query reformulators, rerankers, or multiple retrieval backends—and learn how to use them effectively. This includes not only deciding which tools to invoke but also determining what input to provide and how to interpret the output for downstream decision-making. In this view, agents serve as policy models that orchestrate tool usage based on context and task requirements.</p>
             </div>
             <div class="research-card">
-                <h3>Agent-level Hybrid Retrieval</h3>
-                <p>This approach consists of multiple specialized yet closely coordinated agents: a retriever, a rewriter, and a reranker. Each agent specializes in a specific aspect of the retrieval process, with coordination facilitated through iterative interactions and state-sharing mechanisms. Through this iterative cooperation, these agents progressively enhance retrieval effectiveness and relevance.</p>
-                <div class="tags">
-                    <span class="tag">Information Retrieval</span>
-                    <span class="tag">Hybrid Retrieval</span>
-                    <span class="tag">Domain Adaptation</span>
-                    <span class="tag">Zero-shot Retrieval</span>
-                    <span class="tag">Query Expansion/Refinement</span>
-                    <span class="tag">Multi-agent Systems</span>
-                    <span class="tag">Cooperative Retrieval</span>
-                </div>
+                <h3>How Agentic Retrieval System Interact with Memory</h3>
+                <p>Agents benefit from storing and recalling useful patterns, strategies, or outcomes from past retrieval experiences. This memory may take the form of episodic traces, cached retrieval states, or learned priors that inform future decisions. A central challenge lies in determining what to remember, how to represent it, and when to leverage it to improve ongoing retrieval behavior.</p>
             </div>
         </section>
 
         <section id="publications" class="section">
             <h2 class="section-title">Publications</h2>
             <div class="publication">
+                <h3>From Token to Action: State Machine Reasoning to Mitigate Overthinking in Information Retrieval</h3>
+                <p class="authors"><b>Dohyeon Lee</b>, Yeonseok Jeong, Seung-won Hwang</p>
+                <p class="journal">Arxiv 2025</p>
+                <div class="publication-links">
+                    <a href="https://arxiv.org/abs/2505.23059" target="_blank" class="publication-link">Paper</a>
+                    <a href="https://github.com/ldilab/SMR" target="_blank" class="publication-link">Code</a>
+                </div>
+            </div>
+            <div class="publication">
+                <h3>ECoRAG: Evidentiality-guided Compression for Long Context RAG</h3>
+                <p class="authors">Yeonseok Jeong, Jinsu Kim, <b>Dohyeon Lee</b>, Seung-won Hwang</p>
+                <p class="journal">Findings of ACL 2025</p>
+                <div class="publication-links">
+                    <a href="https://arxiv.org/pdf/2506.05167" target="_blank" class="publication-link">Paper</a>
+                    <a href="https://github.com/ldilab/ECoRAG" target="_blank" class="publication-link">Code</a>
+                </div>
+            </div>
+            <div class="publication">
                 <h3>tRAG: Term-level Retrieval-Augmented Generation for Zero-shot Retrieval</h3>
                 <p class="authors"><b>Dohyeon Lee</b>, Jongyoon Kim, Jihyuk Kim, Seung-won Hwang, and Joonsuk Park</p>
                 <p class="journal">NAACL 2025</p>
                 <div class="publication-links">
-                    <a href="#" class="publication-link disabled">Paper</a>
-                    <a href="#" class="publication-link disabled">Slide</a>
-                    <a href="#" class="publication-link disabled">Poster</a>
+                    <a href="https://aclanthology.org/2025.naacl-long.334.pdf" target="_blank" class="publication-link">Paper</a>
+                    <a href="https://underline.io/events/484/sessions/19821/lecture/116406-trag-term-level-retrieval-augmented-generation-for-domain-adaptive-retrieval?tab=Video" target="_blank" class="publication-link">Slide</a>
+                    <a href="https://underline.io/events/484/sessions/19821/lecture/116406-trag-term-level-retrieval-augmented-generation-for-domain-adaptive-retrieval?tab=Poster" target="_blank" class="publication-link">Poster</a>
                 </div>
             </div>
             <div class="publication">
@@ -543,9 +525,9 @@
                 <p class="authors">Jaeyoung Kim, <b>Dohyeon Lee</b>, and Seung-won Hwang</p>
                 <p class="journal">NAACL 2025</p>
                 <div class="publication-links">
-                    <a href="#" class="publication-link disabled">Paper</a>
-                    <a href="#" class="publication-link disabled">Slide</a>
-                    <a href="#" class="publication-link disabled">Poster</a>
+                    <a href="https://aclanthology.org/2025.naacl-long.276.pdf" target="_blank" class="publication-link">Paper</a>
+                    <a href="https://underline.io/events/484/posters/19968/poster/117195-query-focused-referentiability-learning-for-zero-shot-retrieval?tab=Video" target="_blank" class="publication-link">Slide</a>
+                    <a href="https://underline.io/events/484/posters/19968/poster/117195-query-focused-referentiability-learning-for-zero-shot-retrieval?tab=Poster" target="_blank" class="publication-link">Poster</a>
                 </div>
             </div>
             <div class="publication">
@@ -556,6 +538,7 @@
                     <a href="https://aclanthology.org/2024.findings-acl.825.pdf" target="_blank" class="publication-link">Paper</a>
                     <a href="https://underline.io/events/466/posters/18221/poster/102068-dada-distribution-aware-domain-adaptation-of-plms-for-information-retrieval?tab=Video" target="_blank" class="publication-link">Slide</a>
                     <a href="https://underline.io/events/466/posters/18221/poster/102068-dada-distribution-aware-domain-adaptation-of-plms-for-information-retrieval?tab=Poster" target="_blank" class="publication-link">Poster</a>
+                    <a href="https://github.com/ldilab/DADA" target="_blank" class="publication-link">Code</a>
                 </div>
             </div>
             <div class="publication">
@@ -721,120 +704,6 @@
                 <div class="timeline-content">
                     <p><b>Research title:</b> Sparse-Dense Hybrid Retrieval</p>
                     <p><b>Mentor:</b> Ph.D. Sunghyun Park</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="section">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills">
-                <div class="skill-category">
-                    <h3>Programming Language</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Python</span>
-                            <span>10+ years</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>C/C++</span>
-                            <span>5+ years</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>C#</span>
-                            <span>5+ years</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Java</span>
-                            <span>3+ years</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 60%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Deep Learning Frameworks</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>PyTorch</span>
-                            <span>7+ years</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Huggingface</span>
-                            <span>5+ years</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Ray</span>
-                            <span>5+ years</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Pyserini</span>
-                            <span>3+ years</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 60%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Korean</span>
-                            <span>Native</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 100%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>English</span>
-                            <span>TOEFL 85 / TEPS 321</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Japanese</span>
-                            <span>Second foreign language</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 40%"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
