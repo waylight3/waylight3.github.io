@@ -1,779 +1,414 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dohyeon Lee</title>
+    <title>Dohyeon Lee - Academic Profile</title>
+    <meta name="description" content="Dohyeon Lee is a postdoctoral researcher at KAIST researching information retrieval, retrieval-augmented generation, LLM-based agents, and agentic memory.">
+    <link rel="canonical" href="https://waylight3.github.io/">
+    <meta property="og:title" content="Dohyeon Lee - Academic Profile">
+    <meta property="og:description" content="Postdoctoral researcher at KAIST researching information retrieval, retrieval-augmented generation, LLM-based agents, and agentic memory.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://waylight3.github.io/">
+    <meta property="og:image" content="https://waylight3.github.io/img/profile.jpg">
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --disabled-color: #7e7e7e;
-            --light-accent: #ebf5fb;
-            --light-disabled: #cecece;
-            --text-color: #333;
-            --light-gray: #f8f9fa;
-            --border-color: #e0e0e0;
-            --font-main: 'Noto Sans KR', 'Helvetica Neue', Arial, sans-serif;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: var(--font-main);
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #fff;
-            padding-top: 70px;
-        }
-        
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-        
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 10%;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-        
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 21px;
-            cursor: pointer;
-        }
-        
-        .menu-toggle span {
-            display: block;
-            height: 3px;
-            width: 100%;
-            background-color: var(--primary-color);
-            border-radius: 3px;
-            transition: all 0.3s ease;
-        }
-
-        .container {
-            width: 80%;
-            max-width: 1200px;
+            max-width: 76ch;
             margin: 0 auto;
-            padding: 40px 0;
-        }
-        
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 60px 0;
-            background-color: var(--light-gray);
-            border-radius: 10px;
-            margin-bottom: 60px;
-        }
-        
-        .hero-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin-bottom: 20px;
-            color: #666;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            transition: color 0.3s;
-        }
-        
-        .social-links a:hover {
-            color: var(--accent-color);
-        }
-        
-        .section {
-            margin-bottom: 60px;
-        }
-        
-        .section-title {
-            position: relative;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--border-color);
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 80px;
-            height: 2px;
-            background-color: var(--accent-color);
-        }
-        
-        .research-card {
-            background-color: var(--light-gray);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 25px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 2rem 1rem;
+            color: #1f2428;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
         }
 
-        .research-card:first-of-type {
-            margin-top: 20px;
-        }
-        
-        .research-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .research-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-        
-        .research-card p {
-            margin-bottom: 15px;
-        }
-        
-        .research-card .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        
-        .tag {
-            background-color: var(--light-accent);
-            color: var(--accent-color);
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        
-        .publication {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .publication:last-child {
-            border-bottom: none;
-        }
-        
-        .publication h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-        
-        .publication .authors {
-            font-style: italic;
-            margin-bottom: 8px;
-        }
-        
-        .publication .journal {
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-        
-        .publication-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .publication-link {
-            display: inline-block;
-            padding: 6px 12px;
-            background-color: var(--light-accent);
-            color: var(--accent-color);
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            transition: background-color 0.3s;
-        }
-        
-        .publication-link:hover {
-            background-color: var(--accent-color);
-            color: white;
-        }
-        
-        .publication-link.disabled {
-            display: inline-block;
-            padding: 6px 12px;
-            background-color: var(--light-disabled);
-            color: var(--disabled-color);
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            transition: background-color 0.3s;
-        }
-        
-        .publication-link.disabled:hover {
-            background-color: var(--disabled-color);
-            color: white;
-        }
-        
-        .education-item, .experience-item {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .education-item:last-child, .experience-item:last-child {
-            border-bottom: none;
-        }
-        
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        
-        .timeline-header h3 {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-        }
-        
-        .timeline-header .date {
-            color: var(--accent-color);
-            font-weight: 500;
-        }
-        
-        .timeline-content p {
-            margin-bottom: 8px;
-        }
-        
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .skill-category {
-            flex: 1;
-            min-width: 250px;
-            background-color: var(--light-gray);
-            border-radius: 8px;
-            padding: 20px;
-        }
-        
-        .skill-category h3 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-        
-        .skill-item {
-            margin-bottom: 15px;
-        }
-        
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
-        
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background-color: #e0e0e0;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .progress {
-            height: 100%;
-            background-color: var(--accent-color);
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .contact-item i {
-            color: var(--accent-color);
-            font-size: 1.2rem;
-        }
-        
+        header,
+        main,
         footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 60px;
+            margin-bottom: 2rem;
         }
-        
-        footer p {
-            margin-bottom: 10px;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-            
-            .navbar {
-                flex-direction: column;
-                padding: 15px 5%;
-            }
-            
-            .menu-toggle {
-                display: flex;
-            }
 
-            .nav-links {
-                position: absolute;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                flex-direction: column;
-                background-color: white;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-                padding: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-            }
-            
-            .nav-links.active {
-                max-height: 400px;
-                padding: 10px 0;
-            }
-            
-            .nav-links li {
-                margin: 0;
-                width: 100%;
-                text-align: center;
-            }
-            
-            .nav-links li a {
-                display: block;
-                padding: 10px 0;
-            }
-            
-            .timeline-header {
-                flex-direction: column;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
+        h1,
+        h2,
+        h3 {
+            line-height: 1.25;
+        }
+
+        h1 {
+            margin-bottom: 0.25rem;
+        }
+
+        h2 {
+            margin-top: 2.25rem;
+            border-bottom: 1px solid #d8dee4;
+            padding-bottom: 0.35rem;
+        }
+
+        a {
+            color: #0969da;
+        }
+
+        article {
+            margin: 1.2rem 0;
+        }
+
+        .profile-photo {
+            display: block;
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .button-link {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.65rem 0.9rem;
+            border: 1px solid #1f2428;
+            border-radius: 4px;
+            color: #1f2428;
+            text-decoration: none;
+            font-weight: 650;
+        }
+
+        .metadata {
+            color: #57606a;
+        }
+
+        .inline-list {
+            padding-left: 1.2rem;
+        }
+
+        .publication-links {
+            margin-top: 0.35rem;
+        }
+
+        #publications article {
+            margin: 0.8rem 0;
+        }
+
+        #publications h3 {
+            margin: 0 0 0.15rem;
+        }
+
+        #publications p {
+            margin: 0.12rem 0;
+        }
+
+        #publications .publication-links {
+            margin-top: 0.25rem;
+        }
+
+        address {
+            font-style: normal;
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dohyeon Lee",
+        "url": "https://waylight3.github.io/",
+        "image": "https://waylight3.github.io/img/profile.jpg",
+        "email": "waylight3@snu.ac.kr",
+        "jobTitle": "Postdoctoral Researcher",
+        "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "KAIST"
+        },
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Seoul National University"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Yonsei University"
+            }
+        ],
+        "knowsAbout": [
+            "Information Retrieval",
+            "Retrieval-Augmented Generation",
+            "LLM Agents",
+            "Agentic Retrieval",
+            "Agentic Memory",
+            "Long-term Memory",
+            "Zero-shot Retrieval",
+            "Domain Adaptation",
+            "Dense and Sparse Retrieval",
+            "Hybrid Retrieval",
+            "Query Refinement",
+            "Test-time Reasoning",
+            "Memory-augmented Agents"
+        ],
+        "sameAs": [
+            "https://github.com/waylight3",
+            "https://www.linkedin.com/in/dohyeon-lee-013a15362",
+            "https://scholar.google.com/citations?user=Gjk6Zk0AAAAJ",
+            "https://aclanthology.org/people/dohyeon-lee/",
+            "https://www.semanticscholar.org/author/Dohyeon-Lee/2135607329",
+            "https://orcid.org/0000-0002-3729-305X"
+        ]
+    }
+    </script>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <a href="#" class="logo">Dohyeon Lee</a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
+        <img src="img/profile.jpg" alt="Dohyeon Lee" class="profile-photo" width="160" height="160">
+        <h1>Dohyeon Lee</h1>
+        <p>Postdoctoral researcher at KAIST (Korea Advanced Institute of Science and Technology) since March 2026.</p>
+        <p>I received my Ph.D. in Computer Science and Engineering from Seoul National University in 2026, advised by <a href="https://seungwonh.github.io/" target="_blank" rel="noopener noreferrer">Prof. Seung-won Hwang</a>.</p>
+        <p>My research focuses on information retrieval, retrieval-augmented generation, LLM-based agents, and agentic memory.</p>
+        <p><a class="button-link" href="./profile.html">View Designed Profile</a></p>
+        <nav aria-label="Profile sections">
+            <ul class="inline-list">
+                <li><a href="#research">Research Areas</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#awards">Awards</a></li>
+                <li><a href="#awards">Awards and Scholarships</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <section id="about" class="hero">
-            <img src="img/profile.jpg" alt="Profile image" class="hero-image">
-            <h1>Dohyeon Lee</h1>
-            <p>I am a Ph.D. Student at the LDI Lab of Seoul National University.</p>
-            <p>I am fortunate to be advised by <a href="https://seungwonh.github.io/" target="_blank" style="text-decoration:none;">Prof. Seung-won Hwang</a>.</p>
-            <p>My research interests focus on agentic AI on information retrieval system.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/dohyeon-lee-013a15362" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/waylight3" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://scholar.google.com/citations?user=Gjk6Zk0AAAAJ" target="_blank"><i class="fab fa-google-scholar"></i></a>
-            </div>
+    <main>
+        <section id="research" aria-labelledby="research-heading">
+            <h2 id="research-heading">Research Areas</h2>
+
+            <article>
+                <h3>Research Statement</h3>
+                <p>My research focuses on information retrieval, retrieval-augmented generation, LLM-based agents, and agentic memory. I am particularly interested in building robust information-seeking agents that can adapt to unseen domains through feedback-driven alignment and long-term experience accumulation.</p>
+                <p>My work studies how retrieval systems can use corpus-level statistics, retrieval evidence, complementary sparse-dense signals, retrieval-state feedback, and memory mechanisms to improve data generation, query refinement, hybrid retrieval, reasoning-time decision making, and long-horizon agent behavior.</p>
+                <p>I also study how memories should be generated from past trajectories, retrieved for future tasks, updated as new evidence arrives, and managed efficiently under practical inference constraints. My broader goal is to develop self-improving retrieval agents that remain reliable, efficient, and grounded in external evidence while accumulating useful experience over time.</p>
+                <p class="metadata">Keywords: Information Retrieval, Retrieval-Augmented Generation, LLM Agents, Agentic Retrieval, Agentic Memory, Long-term Memory, Domain Adaptation, Zero-shot Retrieval, Dense and Sparse Retrieval, Hybrid Retrieval, Query Refinement, Test-time Reasoning, Memory-augmented Agents.</p>
+            </article>
+
+            <article>
+                <h3>Robust Information-Seeking Agents</h3>
+                <p>I study agents that use retrieval, retrieval-state feedback, and test-time reasoning to search for information, refine queries, and make grounded decisions across unfamiliar domains.</p>
+            </article>
+
+            <article>
+                <h3>Hybrid Retrieval and RAG</h3>
+                <p>I work on retrieval systems that combine corpus-level statistics, retrieval evidence, and complementary dense-sparse signals to improve domain adaptation, zero-shot retrieval, data generation, and retrieval-augmented generation.</p>
+            </article>
+
+            <article>
+                <h3>Agentic Memory</h3>
+                <p>I study how long-term memories can be generated from past trajectories, retrieved for future tasks, updated with new evidence, and managed efficiently under practical inference constraints.</p>
+            </article>
         </section>
 
-        <section id="research" class="section">
-            <h2 class="section-title">Research Area</h2>
-            An <b>Agentic Retrieval System</b> is a retrieval framework in which agents actively interact with their environment to adapt, make decisions, and improve performance over time. The notion of agentic behavior emphasizes that agents are not static components but autonomous actors capable of exploration and adaptation. The environment can take many forms—including data, tools, memory, and other agents—which shape how the agent perceives, learns, and acts within the retrieval ecosystem.
-            <div class="research-card">
-                <h3>How Agentic Retrieval System Interact with Data</h3>
-                <p>Agents are exposed to new domain-specific corpora and tasked with adapting their retrieval strategies accordingly. Through exploration, they identify informative patterns or signals—such as domain-specific term distributions or statistical cues like inverse document frequency (IDF)—which help refine queries and relevance assessments. This interaction enables adaptive retrieval in unfamiliar or evolving data environments.</p>
-            </div>
-            <div class="research-card">
-                <h3>How Agentic Retrieval System Interact with Other Agents</h3>
-                <p>In multi-agent retrieval settings, each agent may specialize in a particular domain, retrieval strategy, or reasoning style. Effective collaboration depends on defining clear roles and encouraging complementary behaviors that enhance overall system performance. A key research focus is on quantifying and optimizing synergy among agents, such as minimizing redundancy or maximizing coverage across retrieved information.</p>
-            </div>
-            <div class="research-card">
-                <h3>How Agentic Retrieval System Interact with Tools</h3>
-                <p>Agents interact with a variety of retrieval tools—such as query reformulators, rerankers, or multiple retrieval backends—and learn how to use them effectively. This includes not only deciding which tools to invoke but also determining what input to provide and how to interpret the output for downstream decision-making. In this view, agents serve as policy models that orchestrate tool usage based on context and task requirements.</p>
-            </div>
-            <div class="research-card">
-                <h3>How Agentic Retrieval System Interact with Memory</h3>
-                <p>Agents benefit from storing and recalling useful patterns, strategies, or outcomes from past retrieval experiences. This memory may take the form of episodic traces, cached retrieval states, or learned priors that inform future decisions. A central challenge lies in determining what to remember, how to represent it, and when to leverage it to improve ongoing retrieval behavior.</p>
-            </div>
-        </section>
+        <section id="publications" aria-labelledby="publications-heading">
+            <h2 id="publications-heading">Publications</h2>
 
-        <section id="publications" class="section">
-            <h2 class="section-title">Publications</h2>
-            <div class="publication">
+            <article>
+                <h3>Beyond Markovian Forgetfulness: Episodic Memory for Reasoning-Intensive Retrieval</h3>
+                <p><strong>Dohyeon Lee</strong>, Yeonseok Jeong, and Seung-won Hwang.</p>
+                <p class="metadata">ACL 2026.</p>
+            </article>
+
+            <article>
+                <h3>D3: Dynamic Docid Decoding for Multi-Intent Generative Retrieval</h3>
+                <p>Jaeyoung Kim*, <strong>Dohyeon Lee*</strong>, Soona Hong*, and Seung-won Hwang.</p>
+                <p class="metadata">EACL 2026, Industry Track.</p>
+                <p class="publication-links"><a href="https://aclanthology.org/2026.eacl-industry.58.pdf" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
+
+            <article>
                 <h3>From Token to Action: State Machine Reasoning to Mitigate Overthinking in Information Retrieval</h3>
-                <p class="authors"><b>Dohyeon Lee</b>, Yeonseok Jeong, Seung-won Hwang</p>
-                <p class="journal">Arxiv 2025</p>
-                <div class="publication-links">
-                    <a href="https://arxiv.org/abs/2505.23059" target="_blank" class="publication-link">Paper</a>
-                    <a href="https://github.com/ldilab/SMR" target="_blank" class="publication-link">Code</a>
-                </div>
-            </div>
-            <div class="publication">
+                <p><strong>Dohyeon Lee</strong>, Yeonseok Jeong, and Seung-won Hwang.</p>
+                <p class="metadata">Findings of EMNLP 2025.</p>
+                <p class="publication-links"><a href="https://aclanthology.org/2025.findings-emnlp.371.pdf" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
+
+            <article>
                 <h3>ECoRAG: Evidentiality-guided Compression for Long Context RAG</h3>
-                <p class="authors">Yeonseok Jeong, Jinsu Kim, <b>Dohyeon Lee</b>, Seung-won Hwang</p>
-                <p class="journal">Findings of ACL 2025</p>
-                <div class="publication-links">
-                    <a href="https://arxiv.org/pdf/2506.05167" target="_blank" class="publication-link">Paper</a>
-                    <a href="https://github.com/ldilab/ECoRAG" target="_blank" class="publication-link">Code</a>
-                </div>
-            </div>
-            <div class="publication">
-                <h3>tRAG: Term-level Retrieval-Augmented Generation for Zero-shot Retrieval</h3>
-                <p class="authors"><b>Dohyeon Lee</b>, Jongyoon Kim, Jihyuk Kim, Seung-won Hwang, and Joonsuk Park</p>
-                <p class="journal">NAACL 2025</p>
-                <div class="publication-links">
-                    <a href="https://aclanthology.org/2025.naacl-long.334.pdf" target="_blank" class="publication-link">Paper</a>
-                    <a href="https://underline.io/events/484/sessions/19821/lecture/116406-trag-term-level-retrieval-augmented-generation-for-domain-adaptive-retrieval?tab=Video" target="_blank" class="publication-link">Slide</a>
-                    <a href="https://underline.io/events/484/sessions/19821/lecture/116406-trag-term-level-retrieval-augmented-generation-for-domain-adaptive-retrieval?tab=Poster" target="_blank" class="publication-link">Poster</a>
-                </div>
-            </div>
-            <div class="publication">
+                <p>Yeonseok Jeong, Jinsu Kim, <strong>Dohyeon Lee</strong>, and Seung-won Hwang.</p>
+                <p class="metadata">Findings of ACL 2025.</p>
+                <p class="publication-links"><a href="https://aclanthology.org/2025.findings-acl.1365.pdf" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
+
+            <article>
                 <h3>Query-focused Referentiability Learning for Zero-shot Retrieval</h3>
-                <p class="authors">Jaeyoung Kim, <b>Dohyeon Lee</b>, and Seung-won Hwang</p>
-                <p class="journal">NAACL 2025</p>
-                <div class="publication-links">
-                    <a href="https://aclanthology.org/2025.naacl-long.276.pdf" target="_blank" class="publication-link">Paper</a>
-                    <a href="https://underline.io/events/484/posters/19968/poster/117195-query-focused-referentiability-learning-for-zero-shot-retrieval?tab=Video" target="_blank" class="publication-link">Slide</a>
-                    <a href="https://underline.io/events/484/posters/19968/poster/117195-query-focused-referentiability-learning-for-zero-shot-retrieval?tab=Poster" target="_blank" class="publication-link">Poster</a>
-                </div>
-            </div>
-            <div class="publication">
-                <h3>DADA: Distribution-Aware Domain Adaptation of PLMs for Information Retrieval</h3>
-                <p class="authors"><b>Dohyeon Lee*</b>, Jongyoon Kim*, Seung-won Hwang, and Joonsuk Park</p>
-                <p class="journal">Findings of ACL 2024</p>
-                <div class="publication-links">
-                    <a href="https://aclanthology.org/2024.findings-acl.825.pdf" target="_blank" class="publication-link">Paper</a>
-                    <a href="https://underline.io/events/466/posters/18221/poster/102068-dada-distribution-aware-domain-adaptation-of-plms-for-information-retrieval?tab=Video" target="_blank" class="publication-link">Slide</a>
-                    <a href="https://underline.io/events/466/posters/18221/poster/102068-dada-distribution-aware-domain-adaptation-of-plms-for-information-retrieval?tab=Poster" target="_blank" class="publication-link">Poster</a>
-                    <a href="https://github.com/ldilab/DADA" target="_blank" class="publication-link">Code</a>
-                </div>
-            </div>
-            <div class="publication">
-                <h3>HIL: Hybrid Isotropy Learning for Zero-shot Performance in Dense retrieval</h3>
-                <p class="authors">Jaeyoung Kim, <b>Dohyeon Lee</b>, and Seung-won Hwang</p>
-                <p class="journal">NAACL 2024</p>
-                <div class="publication-links">
-                    <a href="https://aclanthology.org/2024.naacl-long.437.pdf" target="_blank" class="publication-link">Paper</a>
-                    <a href="https://underline.io/events/458/posters/17936/poster/97883-hil-hybrid-isotropy-learning-for-zero-shot-performance-in-dense-retrieval?tab=Video" target="_blank" class="publication-link">Slide</a>
-                    <a href="https://underline.io/events/458/posters/17936/poster/97883-hil-hybrid-isotropy-learning-for-zero-shot-performance-in-dense-retrieval?tab=Poster" target="_blank" class="publication-link">Poster</a>
-                </div>
-            </div>
-            <div class="publication">
-                <h3>Script-mix: Mixing Scripts for Low-resource Language Parsing</h3>
-                <p class="authors">Jaeseong Lee, <b>Dohyeon Lee</b>, and Seung-won Hwang</p>
-                <p class="journal">NAACL 2024</p>
-                <div class="publication-links">
-                    <a href="https://aclanthology.org/2024.naacl-long.357.pdf" target="_blank" class="publication-link">Paper</a>
-                    <a href="https://underline.io/events/458/posters/17468/poster/97741-scriptmix-mixing-scripts-for-low-resource-language-parsing?tab=Video" target="_blank" class="publication-link">Slide</a>
-                    <a href="https://underline.io/events/458/posters/17468/poster/97741-scriptmix-mixing-scripts-for-low-resource-language-parsing?tab=Poster" target="_blank" class="publication-link">Poster</a>
-                </div>
-            </div>
-            <div class="publication">
-                <h3>Chaining Event Spans for Temporal Relation Grounding</h3>
-                <p class="authors">Jongho Kim, <b>Dohyeon Lee</b>, Minsoo Kim, and Seung-won Hwang</p>
-                <p class="journal">EACL 2024</p>
-                <div class="publication-links">
-                    <a href="https://aclanthology.org/2024.eacl-long.101.pdf" target="_blank" class="publication-link">Paper</a>
-                </div>
-            </div>
-            <div class="publication">
+                <p>Jaeyoung Kim, <strong>Dohyeon Lee</strong>, and Seung-won Hwang.</p>
+                <p class="metadata">NAACL 2025.</p>
+                <p class="publication-links"><a href="https://aclanthology.org/2025.naacl-long.276.pdf" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
+
+            <article>
+                <h3>tRAG: Term-level Retrieval-Augmented Generation for Zero-shot Retrieval</h3>
+                <p><strong>Dohyeon Lee</strong>, Jongyoon Kim, Jihyuk Kim, Seung-won Hwang, and Joonsuk Park.</p>
+                <p class="metadata">NAACL 2025.</p>
+                <p class="publication-links"><a href="https://aclanthology.org/2025.naacl-long.334.pdf" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
+
+            <article>
                 <h3>Interventional Speech Noise Injection for ASR Generalizable Spoken Language Understanding</h3>
-                <p class="authors">YeonJoon Jung, Jaeseong Lee, Seungtaek Choi, <b>Dohyeon Lee</b>, Minsoo Kim, and Seung-won Hwang
+                <p>YeonJoon Jung, Jaeseong Lee, Seungtaek Choi, <strong>Dohyeon Lee</strong>, Minsoo Kim, and Seung-won Hwang.</p>
+                <p class="metadata">EMNLP 2024.</p>
+                <p class="publication-links"><a href="https://aclanthology.org/2024.emnlp-main.1149.pdf" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
+
+            <article>
+                <h3>DADA: Distribution-Aware Domain Adaptation of PLMs for Information Retrieval</h3>
+                <p><strong>Dohyeon Lee*</strong>, Jongyoon Kim*, Seung-won Hwang, and Joonsuk Park.</p>
+                <p class="metadata">Findings of ACL 2024.</p>
+                <p class="publication-links">
+                    <a href="https://aclanthology.org/2024.findings-acl.825.pdf" target="_blank" rel="noopener noreferrer">Paper</a>;
+                    <a href="https://underline.io/events/466/posters/18221/poster/102068-dada-distribution-aware-domain-adaptation-of-plms-for-information-retrieval?tab=Video" target="_blank" rel="noopener noreferrer">Slides</a>;
+                    <a href="https://underline.io/events/466/posters/18221/poster/102068-dada-distribution-aware-domain-adaptation-of-plms-for-information-retrieval?tab=Poster" target="_blank" rel="noopener noreferrer">Poster</a>
                 </p>
-                <p class="journal">EMNLP 2024</p>
-                <div class="publication-links">
-                    <a href="https://aclanthology.org/2024.emnlp-main.1149.pdf" target="_blank" class="publication-link">Paper</a>
-                </div>
-            </div>
-            <div class="publication">
+            </article>
+
+            <article>
+                <h3>HIL: Hybrid Isotropy Learning for Zero-shot Performance in Dense Retrieval</h3>
+                <p>Jaeyoung Kim, <strong>Dohyeon Lee</strong>, and Seung-won Hwang.</p>
+                <p class="metadata">NAACL 2024.</p>
+                <p class="publication-links">
+                    <a href="https://aclanthology.org/2024.naacl-long.437.pdf" target="_blank" rel="noopener noreferrer">Paper</a>;
+                    <a href="https://underline.io/events/458/posters/17936/poster/97883-hil-hybrid-isotropy-learning-for-zero-shot-performance-in-dense-retrieval?tab=Video" target="_blank" rel="noopener noreferrer">Slides</a>;
+                    <a href="https://underline.io/events/458/posters/17936/poster/97883-hil-hybrid-isotropy-learning-for-zero-shot-performance-in-dense-retrieval?tab=Poster" target="_blank" rel="noopener noreferrer">Poster</a>
+                </p>
+            </article>
+
+            <article>
+                <h3>Script-mix: Mixing Scripts for Low-resource Language Parsing</h3>
+                <p>Jaeseong Lee, <strong>Dohyeon Lee</strong>, and Seung-won Hwang.</p>
+                <p class="metadata">NAACL 2024.</p>
+                <p class="publication-links">
+                    <a href="https://aclanthology.org/2024.naacl-long.357.pdf" target="_blank" rel="noopener noreferrer">Paper</a>;
+                    <a href="https://underline.io/events/458/posters/17468/poster/97741-scriptmix-mixing-scripts-for-low-resource-language-parsing?tab=Video" target="_blank" rel="noopener noreferrer">Slides</a>;
+                    <a href="https://underline.io/events/458/posters/17468/poster/97741-scriptmix-mixing-scripts-for-low-resource-language-parsing?tab=Poster" target="_blank" rel="noopener noreferrer">Poster</a>
+                </p>
+            </article>
+
+            <article>
+                <h3>Chaining Event Spans for Temporal Relation Grounding</h3>
+                <p>Jongho Kim, <strong>Dohyeon Lee</strong>, Minsoo Kim, and Seung-won Hwang.</p>
+                <p class="metadata">EACL 2024.</p>
+                <p class="publication-links"><a href="https://aclanthology.org/2024.eacl-long.101.pdf" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
+
+            <article>
                 <h3>On Complementarity Objectives for Hybrid Retrieval</h3>
-                <p class="authors"><b>Dohyeon Lee</b>, Seung-won Hwang, Kyungjae Lee, Seungtaek Choi and, Sunghyun Park</p>
-                <p class="journal">ACL 2023</p>
-                <div class="publication-links">
-                    <a href="https://aclanthology.org/2023.acl-long.746.pdf" target="_blank" class="publication-link">Paper</a>
-                    <a href="https://underline.io/lecture/77199-on-complementarity-objectives-for-hybrid-retrieval" target="_blank" class="publication-link">Slide</a>
-                    <a href="https://underline.io/lecture/77199-on-complementarity-objectives-for-hybrid-retrieval" target="_blank" class="publication-link">Poster</a>
-                </div>
-            </div>
-            <div class="publication">
+                <p><strong>Dohyeon Lee</strong>, Seung-won Hwang, Kyungjae Lee, Seungtaek Choi, and Sunghyun Park.</p>
+                <p class="metadata">ACL 2023.</p>
+                <p class="publication-links">
+                    <a href="https://aclanthology.org/2023.acl-long.746.pdf" target="_blank" rel="noopener noreferrer">Paper</a>;
+                    <a href="https://underline.io/lecture/77199-on-complementarity-objectives-for-hybrid-retrieval" target="_blank" rel="noopener noreferrer">Slides</a>;
+                    <a href="https://underline.io/lecture/77199-on-complementarity-objectives-for-hybrid-retrieval" target="_blank" rel="noopener noreferrer">Poster</a>
+                </p>
+            </article>
+
+            <article>
                 <h3>C2LIR: Continual Cross-lingual Transfer for Low-Resource Information Retrieval</h3>
-                <p class="authors">Jaeseong Lee*, <b>Dohyeon Lee*</b>, Jongho Kim, and Seung-won Hwang</p>
-                <p class="journal">ECIR 2023 (short)</p>
-                <div class="publication-links">
-                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-28238-6_37" target="_blank" class="publication-link">Paper</a>
-                </div>
-            </div>
-            <div class="publication">
-                <h3>Script, Language, and Labels: Overcoming Three Discrepancies for Low-Resource Language Specialization</h3>
-                <p class="authors">Jaeseong Lee, <b>Dohyeon Lee</b>, and Seung-won Hwang</p>
-                <p class="journal">AAAI 2023</p>
-                <div class="publication-links">
-                    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/26528/26300" target="_blank" class="publication-link">Paper</a>
-                </div>
-            </div>
-            <div class="publication">
+                <p>Jaeseong Lee*, <strong>Dohyeon Lee*</strong>, Jongho Kim, and Seung-won Hwang.</p>
+                <p class="metadata">ECIR 2023, short paper.</p>
+                <p class="publication-links"><a href="https://link.springer.com/chapter/10.1007/978-3-031-28238-6_37" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
+
+            <article>
+                <h3>Script, Language, Labels: Overcoming Three Discrepancies for Low-Resource Language Specialization</h3>
+                <p>Jaeseong Lee, <strong>Dohyeon Lee</strong>, and Seung-won Hwang.</p>
+                <p class="metadata">AAAI 2023.</p>
+                <p class="publication-links"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/26528/26300" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
+
+            <article>
                 <h3>PLM-based World Models for Text-based Games</h3>
-                <p class="authors">Minsoo Kim, Yeonjoon Jung, <b>Dohyeon Lee</b>, and Seung-won Hwang</p>
-                <p class="journal">EMNLP 2022</p>
-                <div class="publication-links">
-                    <a href="https://aclanthology.org/2022.emnlp-main.86.pdf" target="_blank" class="publication-link">Paper</a>
-                </div>
-            </div>
-            <div class="publication">
+                <p>Minsoo Kim, Yeonjoon Jung, <strong>Dohyeon Lee</strong>, and Seung-won Hwang.</p>
+                <p class="metadata">EMNLP 2022.</p>
+                <p class="publication-links"><a href="https://aclanthology.org/2022.emnlp-main.86.pdf" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
+
+            <article>
                 <h3>Robustifying Multi-hop QA through Pseudo-Evidentiality Training</h3>
-                <p class="authors">Kyungjae Lee, Seung-won Hwang, Sang-eun Han, and <b>Dohyeon Lee</b></p>
-                <p class="journal">ACL/IJCNLP 2021</p>
-                <div class="publication-links">
-                    <a href="https://arxiv.org/pdf/2107.03242" target="_blank" class="publication-link">Paper</a>
-                </div>
-            </div>
-            <div class="publication">
-                <h3>SCOPA - Soft Code-Switching and Pairwise Alignment for Zero-Shot Cross-lingual Transfer</h3>
-                <p class="authors"><b>Dohyeon Lee*</b>, Jaeseong Lee*, Gyewon Lee, Byung-Gon Chun, and Seung-won Hwang</p>
-                <p class="journal">CIKM 2021 (short)</p>
-                <div class="publication-links">
-                    <a href="https://dl.acm.org/doi/pdf/10.1145/3459637.3482176" target="_blank" class="publication-link">Paper</a>
-                </div>
-            </div>
+                <p>Kyungjae Lee, Seung-won Hwang, Sang-eun Han, and <strong>Dohyeon Lee</strong>.</p>
+                <p class="metadata">ACL/IJCNLP 2021.</p>
+                <p class="publication-links"><a href="https://arxiv.org/pdf/2107.03242" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
+
+            <article>
+                <h3>SCOPA: Soft Code-Switching, Pairwise Alignment for Zero-Shot Cross-lingual Transfer</h3>
+                <p><strong>Dohyeon Lee*</strong>, Jaeseong Lee*, Gyewon Lee, Byung-Gon Chun, and Seung-won Hwang.</p>
+                <p class="metadata">CIKM 2021, short paper.</p>
+                <p class="publication-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3459637.3482176" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </article>
         </section>
 
-        <section id="education" class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="education-item">
-                <div class="timeline-header">
-                    <h3>Seoul National University - Ph.D. in Computer Science and Engineering</h3>
-                    <span class="date">2021 - (In progress)</span>
-                </div>
-                <div class="timeline-content">
-                    <p><b>Advisor:</b> <a href="https://seungwonh.github.io/" target="_blank" style="text-decoration:none;">Prof. Seung-won Hwang</a></p>
-                    <p><b>Doctoral disseration:</b> (TBD)</p>
-                </div>
-            </div>
-            <div class="education-item">
-                <div class="timeline-header">
-                    <h3>Yonsei University - M.S. in Computer Science</h3>
-                    <span class="date">2019 - 2021</span>
-                </div>
-                <div class="timeline-content">
-                    <p><b>Advisor:</b> <a href="https://seungwonh.github.io/" target="_blank" style="text-decoration:none;">Prof. Seung-won Hwang</a></p>
-                    <p><b>Master's thesis:</b> Orthogonal Disentanglement of Semantic and Symbolic Representation for Query-Document Matching</p>
-                </div>
-            </div>
-            <div class="education-item">
-                <div class="timeline-header">
-                    <h3>Yonsei University - B.S. in Computer Science</h3>
-                    <span class="date">2015 - 2019</span>
-                </div>
-                <div class="timeline-content">
-                    <p><b>GPA:</b> 4.06 / 4.5</p>
-                </div>
-            </div>
+        <section id="education" aria-labelledby="education-heading">
+            <h2 id="education-heading">Education</h2>
+            <article>
+                <h3>Seoul National University - Ph.D. in Computer Science and Engineering</h3>
+                <p class="metadata"><time datetime="2021">2021</time> - <time datetime="2026">2026</time>.</p>
+                <p>Advisor: <a href="https://seungwonh.github.io/" target="_blank" rel="noopener noreferrer">Prof. Seung-won Hwang</a>.</p>
+                <p>Doctoral dissertation: Feedback-Driven Alignment Framework for Robust Retrieval Agents in Unseen Domains.</p>
+            </article>
+
+            <article>
+                <h3>Yonsei University - M.S. in Computer Science</h3>
+                <p class="metadata"><time datetime="2019">2019</time> - <time datetime="2021">2021</time>.</p>
+                <p>Advisor: <a href="https://seungwonh.github.io/" target="_blank" rel="noopener noreferrer">Prof. Seung-won Hwang</a>.</p>
+                <p>Master's thesis: Orthogonal Disentanglement of Semantic and Symbolic Representation for Query-Document Matching.</p>
+            </article>
+
+            <article>
+                <h3>Yonsei University - B.S. in Computer Science</h3>
+                <p class="metadata"><time datetime="2015">2015</time> - <time datetime="2019">2019</time>.</p>
+                <p>GPA: 4.06 / 4.5.</p>
+            </article>
         </section>
 
-        <section id="awards" class="section">
-            <h2 class="section-title">Awards & Scholarships</h2>
-            <div class="experience-item">
-                <div class="timeline-header">
-                    <h3>BK21+ Outstanding Research Fellowship</h3>
-                    <span class="date">2023</span>
-                </div>
-                <div class="timeline-content">
-                    <p>Korean Government Scholarship Program</p>
-                </div>
-            </div>
-            <div class="experience-item">
-                <div class="timeline-header">
-                    <h3>Computer Science Department Scholarship</h3>
-                    <span class="date">2019 - 2021</span>
-                </div>
-                <div class="timeline-content">
-                    <p>at Yonsei University (graduate school)</p>
-                </div>
-            </div>
-            <div class="experience-item">
-                <div class="timeline-header">
-                    <h3>Computer Science Department Scholarship</h3>
-                    <span class="date">2017</span>
-                </div>
-                <div class="timeline-content">
-                    <p>at Yonsei University (undergraduate)</p>
-                </div>
-            </div>
+        <section id="awards" aria-labelledby="awards-heading">
+            <h2 id="awards-heading">Awards and Scholarships</h2>
+            <article>
+                <h3>BK21+ Outstanding Research Fellowship</h3>
+                <p class="metadata"><time datetime="2023">2023</time>. Korean Government Scholarship Program.</p>
+            </article>
+            <article>
+                <h3>Computer Science Department Scholarship</h3>
+                <p class="metadata"><time datetime="2019">2019</time> - <time datetime="2021">2021</time>. Yonsei University, graduate school.</p>
+            </article>
+            <article>
+                <h3>Computer Science Department Scholarship</h3>
+                <p class="metadata"><time datetime="2017">2017</time>. Yonsei University, undergraduate.</p>
+            </article>
         </section>
 
-        <section id="experience" class="section">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-item">
-                <div class="timeline-header">
-                    <h3>NAVER Corp. - Research Intern</h3>
-                    <span class="date">2020.3 - 2020.6</span>
-                </div>
-                <div class="timeline-content">
-                    <p><b>Research title:</b> Sparse-Dense Hybrid Retrieval</p>
-                    <p><b>Mentor:</b> Ph.D. Sunghyun Park</p>
-                </div>
-            </div>
+        <section id="experience" aria-labelledby="experience-heading">
+            <h2 id="experience-heading">Experience</h2>
+            <article>
+                <h3>KAIST - Postdoctoral Researcher</h3>
+                <p class="metadata"><time datetime="2026-03">March 2026</time> - present.</p>
+                <p>Research on information retrieval, retrieval-augmented generation, LLM-based agents, and agentic memory.</p>
+            </article>
+
+            <article>
+                <h3>NAVER Corp. - Research Intern</h3>
+                <p class="metadata"><time datetime="2020-03">March 2020</time> - <time datetime="2020-06">June 2020</time>.</p>
+                <p>Research title: Sparse-Dense Hybrid Retrieval.</p>
+                <p>Mentor: Sunghyun Park, Ph.D.</p>
+            </article>
         </section>
 
-        <section id="contact" class="section">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>waylight3@snu.ac.kr</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>(+82) 010-2001-4214</span>
-                </div>
-            </div>
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <address>
+                Email: <a href="mailto:waylight3@snu.ac.kr">waylight3@snu.ac.kr</a><br>
+                GitHub: <a href="https://github.com/waylight3" target="_blank" rel="noopener noreferrer">GitHub</a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/dohyeon-lee-013a15362" target="_blank" rel="noopener noreferrer">LinkedIn</a><br>
+                Google Scholar: <a href="https://scholar.google.com/citations?user=Gjk6Zk0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a><br>
+                ACL Anthology: <a href="https://aclanthology.org/people/dohyeon-lee/" target="_blank" rel="noopener noreferrer">ACL Anthology</a><br>
+                Semantic Scholar: <a href="https://www.semanticscholar.org/author/Dohyeon-Lee/2135607329" target="_blank" rel="noopener noreferrer">Semantic Scholar</a><br>
+                ORCID: <a href="https://orcid.org/0000-0002-3729-305X" target="_blank" rel="noopener noreferrer">ORCID</a>
+            </address>
         </section>
     </main>
 
     <footer>
-        <p>2025 Dohyeon Lee. All Rights Reserved.</p>
-        <p>Last Update: 2025-03-10</p>
+        <p>Copyright 2026 Dohyeon Lee. Last updated: <time datetime="2026-05-28">May 28, 2026</time>.</p>
     </footer>
-
-    <script>
-        // 부드러운 스크롤 효과
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // 스크롤 시 헤더 효과
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            } else {
-                header.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
-            }
-        });
-
-        // 모바일 메뉴 토글
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.getElementById('nav-links');
-
-        mobileMenu.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
-
-        // 모바일 메뉴 항목 클릭 시 메뉴 닫기
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    navLinks.classList.remove('active');
-                }
-            });
-        });
-
-        // 화면 크기 변경 시 메뉴 상태 리셋
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                navLinks.classList.remove('active');
-            }
-        });
-    </script>
 </body>
 </html>
